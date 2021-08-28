@@ -9,6 +9,7 @@ function JoinArray(array1, array2) {
   }
   return newArray;
 }
+
 const resultOfManualMethod = JoinArray(arr1, arr2); // This method created by me
 const resultOfAutoMethod = arr1.concat(arr2); // This method is javascript's own method
 console.log(resultOfManualMethod);
