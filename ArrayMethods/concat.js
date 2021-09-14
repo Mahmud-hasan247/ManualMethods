@@ -3,11 +3,12 @@ const arr2 = [4, 5, 6];
 const arr3 = [7, 8, 9];
 
 function JoinArray(array1, array2) {
-  const newArray = array1;
+  // const newArray = array1;
   for (let i = 0; i < array2.length; i++) {
-    newArray.push(array2[i]);
+    array1[array1.length] = array2[i];
+    // newArray.push(array2[i]);
   }
-  return newArray;
+  return array1;
 }
 
 const resultOfManualMethod = JoinArray(arr1, arr2); // This method created by me
