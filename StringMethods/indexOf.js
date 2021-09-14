@@ -7,4 +7,4 @@ const IndexByChar = (str, char) => {
 };
 
 const result = IndexByChar(str, "n");
-console.log(result);
+console.log(result); // expected: 11

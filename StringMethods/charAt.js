@@ -5,4 +5,4 @@ function charByIndexNo(str, i) {
 }
 
 const res = charByIndexNo(str, 2);
-console.log(res);
+console.log(res); // expected: h

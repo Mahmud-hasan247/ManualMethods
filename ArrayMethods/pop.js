@@ -6,4 +6,4 @@ const RemoveTheLastElement = (arr) => {
 };
 
 const result = RemoveTheLastElement(arr);
-console.log(result);
+console.log(result); // expected: [ 1, 2, 3, 4, ]

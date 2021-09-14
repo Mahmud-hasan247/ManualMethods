@@ -6,4 +6,4 @@ const RemoveTheFirstElement = (arr) => {
 };
 
 const result = RemoveTheFirstElement(arr);
-console.log(result);
+console.log(result); // expected: [ 2, 3, 4, 5 ]

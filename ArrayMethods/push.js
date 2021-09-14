@@ -6,4 +6,4 @@ function AddElementInLast(arr, newElement) {
 }
 
 const result = AddElementInLast(arr, 6);
-console.log(result);
+console.log(result); // expected: [ 1, 2, 3, 4, 5, 6 ]
