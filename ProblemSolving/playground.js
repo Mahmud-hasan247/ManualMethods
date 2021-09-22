@@ -18,10 +18,10 @@ for (let i = 0; i < arr[0].length; i++) {
 
 const arrayOfTotal = [];
 for (let z = 0; z < mainArr.length; z++) {
-  const t = mainArr[z].reduce((pre, cur) => {
+  const total = mainArr[z].reduce((pre, cur) => {
     return pre + cur;
   }, 0);
-  arrayOfTotal.push(t);
+  arrayOfTotal.push(total);
 }
 
 console.log(tempArr);
