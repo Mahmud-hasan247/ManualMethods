@@ -18,12 +18,10 @@ for (let i = 0; i < arr[0].length; i++) {
 
 const arrayOfTotal = [];
 for (let z = 0; z < mainArr.length; z++) {
-  const total = mainArr[z].reduce((pre, cur) => {
-    return pre + cur;
-  }, 0);
+  const total = mainArr[z].reduce((pre, cur) => pre + cur, 0);
   arrayOfTotal.push(total);
 }
 
-console.log(tempArr);
-console.log(mainArr);
-console.log(arrayOfTotal);
+console.log(tempArr); // expected: []
+console.log(mainArr); // expected: [ [1, 4, 7], [2, 5, 8], [3, 6, 9], [4, 7, 10] ]
+console.log(arrayOfTotal); // expected: [ 12, 15, 18, 21 ]
