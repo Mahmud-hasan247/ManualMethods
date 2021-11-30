@@ -273,10 +273,10 @@ for (let i = 0; i < apiData.length; i++) {
   }
 }
 
-console.log(ar.length);
+// console.log(ar.length);
 const filter = apiData.filter((e) => e.businessPartnerId === 29885);
 // const le = filter;
-console.log(filter.length);
+// console.log(filter.length);
 
 for (let u = 0; u < apiData.length; u++) {
   if (partners.length < 1) {
@@ -295,7 +295,7 @@ for (let u = 0; u < apiData.length; u++) {
   }
 }
 
-console.log(partners.length, "sld");
+// console.log(partners.length, "sld");
 
 const items = [];
 // const itemValues = [];
@@ -357,10 +357,10 @@ const partnerValues = [];
 //     }
 //   }
 // }
-console.log(items.length);
-console.log(partners.length);
+// console.log(items.length);
 // console.log(partners.length);
-console.log(apiData.length);
+// // console.log(partners.length);
+// console.log(apiData.length);
 // console.log(rows);
 
 // for (let i = 0; i < apiData.length; i++) {
@@ -508,8 +508,6 @@ console.log(apiData.length);
 //   )
 // );
 
-
-
 function addTogether(num1, num2) {
   // if (typeof num1 === "number") {
   //   if (num2 && typeof num2 === "number") {
@@ -543,18 +541,138 @@ function addTogether(num1, num2) {
 
 // console.log(addTogether(3)("5"));
 
+// const testArray = [3, [5, [5, [7, [2, [9]]]]]]
 
-let name = "mahmud"
+// console.log(testArray)
 
-name = 88
+const D = [
+  [-1, -1, -1, -0, -0, -0],
+  [-0, -1, -0, -0, -0, -0],
+  [1, 1, 1, 0, 0, 0],
+  [0, 0, 2, 4, 4, 0],
+  [0, 0, 0, 2, 0, 0],
+  [0, 0, 1, 2, 4, 0],
+];
 
-console.log(name)
+const hourglassSum = (a) => {
+  let total = -9999999999;
+  for (let t = 0; t < 4; t++) {
+    for (let u = 0; u < 4; u++) {
+      const current =
+        a[t][u] +
+        a[t][u + 1] +
+        a[t][u + 2] +
+        a[t + 1][u + 1] +
+        a[t + 2][u] +
+        a[t + 2][u + 1] +
+        a[t + 2][u + 2];
+      if (current > total) {
+        total = current;
+      }
+    }
+  }
+  return total;
+};
 
-const aee = ['name', 34]
-const obj = {
-  name: "mahmud",
-  age: 23
-}
+// const c = twoD.reduce((acc, cur, i, arr) => {}, []);
 
-obj.age = "age"
-aee.push(34)
+console.log(-1 + 2);
+
+/*  */
+console.log(hourglassSum(D));
+console.log(3);
+
+const re = /^[Hh][Ii]\s[a-ce-zA-CE-Z]/gi;
+
+let str1 = `8
+always beer
+hi future naturally encourage interval construct surprising
+hi euture naturally encourage interval construct surprising
+open altogether policy goal retired consideration
+
+
+HI catch wander open suggestion
+HI catch wander open suggestion
+onion confusing lost moving extend in material bottom
+
+truck ink
+`;
+
+const arr = str1.split(/\n/);
+// const str2 = "hI sufficiently"
+
+const fil = arr.filter((e) => re.test(e));
+console.log(fil.join("\n"));
+// for (let n = 0; n <= arr.length; n++) {
+
+//   if (re.test(arr[n])) {
+//     console.log(arr[n])
+//   }
+// }
+
+// const one = re.test(str2)
+
+// console.log(one)
+
+const data = [
+  {
+    rowid: 1,
+    partnerId: 0,
+    partnerName: "Anonymous",
+    dtedate: "2021-11-16T00:00:00",
+    invoiceNo: "PR2111021",
+    amount: 2,
+  },
+  {
+    rowid: 2,
+    partnerId: 8,
+    partnerName: "Jubair",
+    dtedate: "2021-11-16T00:00:00",
+    invoiceNo: "PR2111019",
+    amount: 3,
+  },
+  {
+    rowid: 3,
+    partnerId: 8,
+    partnerName: "Jubair",
+    dtedate: "2021-11-16T00:00:00",
+    invoiceNo: "PR2111024",
+    amount: 300,
+  },
+  {
+    rowid: 4,
+    partnerId: 10,
+    partnerName: "S2",
+    dtedate: "2021-11-16T00:00:00",
+    invoiceNo: "PR2111020",
+    amount: 25,
+  },
+  {
+    rowid: 5,
+    partnerId: 10,
+    partnerName: "S2",
+    dtedate: "2021-11-16T00:00:00",
+    invoiceNo: "PR2111022",
+    amount: 0,
+  },
+  {
+    rowid: 6,
+    partnerId: 10,
+    partnerName: "S2",
+    dtedate: "2021-11-16T00:00:00",
+    invoiceNo: "PR2111023",
+    amount: 14,
+  },
+  {
+    rowid: 7,
+    partnerId: 10,
+    partnerName: "S2",
+    dtedate: "2021-11-16T00:00:00",
+    invoiceNo: "PR2111025",
+    amount: 145,
+  },
+];
+
+const total = data.reduce((acc, cur) => (acc += cur?.amount), 0);
+
+console.log(total);
