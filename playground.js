@@ -673,6 +673,52 @@ const data = [
   },
 ];
 
-const total = data.reduce((acc, cur) => (acc += cur?.amount), 0);
+// const total = data.reduce((acc, cur) => (acc += cur?.amount), 0);
 
-console.log(total);
+// console.log(total);
+
+// function dateDifference(date2, date1) {
+//   const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+//   // Discard the time and time-zone information.
+//   const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
+//   const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
+
+//   return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+// }
+
+// const date1 = new Date("2021-11-16T00:05:00");
+// const date2 = new Date("2021-11-12T00:06:00");
+// const dif = dateDifference(date1, date2);
+// console.log(dif);
+// console.log(Math.abs(new Date('2011/10/09 12:00') - new Date('2011/10/09 00:00')));
+
+const reg = /^[0-9]+-?-{1}|[0-9]+$/;
+
+const str = "12-666--54";
+
+console.log(reg.test(str));
+
+// .matches()
+
+const leapYear = (year) => {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return true;
+    }
+  } else {
+    return false;
+  }
+};
+
+const isLeapYear = (year) => {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+};
+
+console.log(isLeapYear(200));

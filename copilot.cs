@@ -41,3 +41,33 @@
 // //        cout<<endl;
 // //    }
 // }
+
+
+using System;
+
+static class LogLine
+{
+    public static string Message(string logLine)
+    {
+        string[] strs1 = logLine.Split(":");
+        return strs1[1].Trim();
+
+    }
+
+    public static string LogLevel(string logLine)
+    {
+        string[] strs2 = logLine.Split(":");
+        char[] charsToTrim = { '[', ']' };
+        string level = strs2[0].Trim(charsToTrim);
+        return level;
+    }
+
+    public static string Reformat(string logLine)
+    {
+        char[] charsToTrim = { '[', ']' };
+        string[] strs3 = logLine.Split(":");
+        string le = strs3[0].Trim(charsToTrim);
+        string me = strs3[1].Trim();
+        return me;
+    }
+}
